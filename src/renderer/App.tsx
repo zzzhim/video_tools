@@ -1,12 +1,10 @@
 import { Button } from '@mui/material'
-import { createHashRouter, RouterProvider, useLocation, useNavigate, useNavigation } from 'react-router-dom'
+import { createHashRouter, Link, RouterProvider, useLocation, useNavigate, useNavigation } from 'react-router-dom'
 import icon from '../../assets/icon.svg'
 import './App.scss'
+import Home from './Home'
 
 const Hello = () => {
-  const his = useNavigation()
-  console.log(his)
-  
   return (
     <div>
       <div className="Hello">
@@ -14,7 +12,9 @@ const Hello = () => {
       </div>
       <h1>welcome use video tools</h1>
       <div className="Hello">
-        <Button variant="contained">开始使用</Button>
+        <Link to={"/home"}>
+          <Button variant="contained">开始使用</Button>
+        </Link>
       </div>
     </div>
   )
@@ -27,8 +27,8 @@ export default function App() {
       element: <Hello />,
     },
     {
-      path: '/a',
-      element: <Hello />,
+      path: '/home',
+      element: <Home />,
     },
   ])
 

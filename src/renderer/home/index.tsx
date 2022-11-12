@@ -1,4 +1,5 @@
 import { Button } from "@mui/material"
+import styles from "./index.module.scss"
 
 const Home = () => {
   const handleConcat = () => {
@@ -6,6 +7,7 @@ const Home = () => {
   }
 
   return <div>
+    <span className={styles.a}>333</span>
     <Button onClick={() => handleConcat()}>合并字幕</Button>
   </div>
 }

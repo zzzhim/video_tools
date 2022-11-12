@@ -1,12 +1,12 @@
 import { Button } from '@mui/material'
-import { createHashRouter, Link, RouterProvider, useLocation, useNavigate, useNavigation } from 'react-router-dom'
+import { createHashRouter, Link, RouterProvider } from 'react-router-dom'
 import icon from '../../assets/icon.svg'
 import './App.scss'
-import Home from './Home'
+import Home from './home'
 
-const Hello = () => {
+const Entry = () => {
   return (
-    <div>
+    <div className='Main'>
       <div className="Hello">
         <img width="200" alt="icon" src={icon} />
       </div>
@@ -24,7 +24,7 @@ export default function App() {
   const router = createHashRouter([
     {
       path: '/',
-      element: <Hello />,
+      element: <Entry />,
     },
     {
       path: '/home',
